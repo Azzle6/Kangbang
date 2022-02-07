@@ -28,6 +28,7 @@ public class ELC_GameManager : MonoBehaviour
     public int CurrentPhase;
     
     private GameObject Player;
+    private AudioManager audioManager;
 
     private void Awake()
     {
@@ -40,6 +41,8 @@ public class ELC_GameManager : MonoBehaviour
 
     private void Start()
     {
+        audioManager = AudioManager.instance;
+        
         StartGame();
     }
 
@@ -57,6 +60,7 @@ public class ELC_GameManager : MonoBehaviour
 
     public void PlayerDie()
     {
+        audioManager.Play("Mort");
         Destroy(Player);
         GameOverMenu.SetActive(true);
         CurrentScore = 0;
