@@ -218,6 +218,7 @@ MonoBehaviour:
   - {fileID: 615891289}
   - {fileID: 2098287862}
   ScoreGO: {fileID: 2010695681}
+  CurrentPhase: 0
 --- !u!4 &130600440
 Transform:
   m_ObjectHideFlags: 0
@@ -616,7 +617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1699243447}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

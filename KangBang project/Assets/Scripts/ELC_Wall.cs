@@ -11,19 +11,15 @@ public class ELC_Wall : MonoBehaviour
         if (!isKillOnTouch)
         {
             
-
-            if (other.gameObject.GetComponent<ELC_Move>().movingSide == 1)
-            {
-                ELC_GameManager.instance.Spikes[0].GenerateSpikes(3);
-            }
-            else ELC_GameManager.instance.Spikes[1].GenerateSpikes(3);
             
             
-            other.gameObject.GetComponent<ELC_Move>().SwitchSide();
-            
-            ELC_GameManager.instance.AddScore();
+            ELC_GameManager.instance.TouchWall();
             
         }
-        else Destroy(other.gameObject);
+        else
+        {
+            Destroy(other.gameObject);
+            ELC_GameManager.instance.PlayerDie();
+        }
     }
 }

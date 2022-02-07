@@ -15,15 +15,21 @@ MonoBehaviour:
   BonbonsValue: 0
   ScoreBumpWall: 10
   LevelsSettings:
-  - SpikesNumbers: 0
-    GravityStrength: 0
-    SpeedMultiplicator: 0
-  - SpikesNumbers: 0
-    GravityStrength: 0
-    SpeedMultiplicator: 0
-  - SpikesNumbers: 0
-    GravityStrength: 0
-    SpeedMultiplicator: 0
-  - SpikesNumbers: 0
-    GravityStrength: 0
-    SpeedMultiplicator: 0
+  - BeginAtPhase: 0
+    SpikesMinNumbers: 0
+    SpikesMaxNumbers: 0
+    BonbonsSummonChance: 0
+  - BeginAtPhase: 7
+    SpikesMinNumbers: 0
+    SpikesMaxNumbers: 0
+    BonbonsSummonChance: 0
+  - BeginAtPhase: 0
+    SpikesMinNumbers: 0
+    SpikesMaxNumbers: 0
+    BonbonsSummonChance: 0
+  - BeginAtPhase: 0
+    SpikesMinNumbers: 0
+    SpikesMaxNumbers: 0
+    BonbonsSummonChance: 0
+  GravityToAdd: 0
+  SpeedToAdd: 0
