@@ -54,9 +54,11 @@
   <ItemGroup>
      <Compile Include="Assets\ELC_Wall.cs" />
      <Compile Include="Assets\ELC_GameManager.cs" />
+     <Compile Include="Assets\Scripts\FC_Scripts\SpikesZone.cs" />
      <Compile Include="Assets\ELC_Move.cs" />
      <Compile Include="Assets\Scripts\FC_Scripts\SpikesZone.cs" />
      <Compile Include="Assets\Scripts\GeneralSettings.cs" />
+     <Compile Include="Assets\Scripts\FC_Scripts\Spike.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.23f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
