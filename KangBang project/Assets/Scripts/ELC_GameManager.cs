@@ -21,6 +21,7 @@ public class ELC_GameManager : MonoBehaviour
     public GameObject PlayerSpawnPosition;
     public List<SpikesZone> Spikes = new List<SpikesZone>(); //Mettre celui de droite en 1er et celui de gauche en 2ème position
     public GameObject ScoreGO;
+    public TMP_Text GameOverScore;
     public GameObject GameOverMenu;
     public GameObject BonbonTemplate;
     public GameObject[] BonbonSpawns;
@@ -49,6 +50,7 @@ public class ELC_GameManager : MonoBehaviour
     public void StartGame()
     {
         Player = Instantiate(PlayerPrefab, PlayerSpawnPosition.transform);
+        Player.GetComponent<SpriteRenderer>().sprite = ELC_GlobalManager.instance.currentSelectedSprite;
         SpawnBonbon();
     }
 
@@ -64,6 +66,7 @@ public class ELC_GameManager : MonoBehaviour
         Destroy(Player);
         GameOverMenu.SetActive(true);
         CurrentScore = 0;
+        GameOverScore.text = "Score : " + CurrentScore;
     }
 
     public void TouchWall()

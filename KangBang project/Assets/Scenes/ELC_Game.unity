@@ -253,6 +253,7 @@ MonoBehaviour:
   - {fileID: 2098287862}
   - {fileID: 615891289}
   ScoreGO: {fileID: 2010695681}
+  GameOverScore: {fileID: 2033660846914608419}
   GameOverMenu: {fileID: 2033660844943197760}
   BonbonTemplate: {fileID: 2734871111293978463, guid: b230e80f0f8c9bb4ab881d4c5eac39f4, type: 3}
   BonbonSpawns:
@@ -1501,7 +1502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2033660845147073963
 RectTransform:
   m_ObjectHideFlags: 0
