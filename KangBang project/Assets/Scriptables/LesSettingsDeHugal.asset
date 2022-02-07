@@ -15,7 +15,7 @@ MonoBehaviour:
   BonbonsValue: 1
   ScoreBumpWall: 1
   LevelsSettings:
-  - BeginAtPhase: 1
+  - BeginAtPhase: 0
     SpikesMinNumbers: 1
     SpikesMaxNumbers: 2
     BonbonsSummonChance: 15
