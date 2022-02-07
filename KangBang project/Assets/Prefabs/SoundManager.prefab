@@ -72,3 +72,12 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 24300002, guid: 2ebb05d3269ff094994e0fccdcc0c287, type: 2}
     source: {fileID: 0}
+  - name: Bonbon
+    clip: {fileID: 8300000, guid: c99c45b189ac32b46977aeac20c2a6d7, type: 3}
+    volume: 0.6
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 2ebb05d3269ff094994e0fccdcc0c287, type: 2}
+    source: {fileID: 0}
