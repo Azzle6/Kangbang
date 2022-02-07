@@ -6,7 +6,7 @@ public class ELC_Move : MonoBehaviour
 {
     public float JumpForce;
     public float HorizontalForce;
-    private int movingSide = 1;
+    public int movingSide = 1;
     private Rigidbody2D rb;
     
     

@@ -6,6 +6,7 @@ using UnityEngine;
 public class GeneralSettings : ScriptableObject
 {
     public int BonbonsValue;
+    public int ScoreBumpWall;
     public LevelParameter[] LevelsSettings;
 }
 
