@@ -14,7 +14,7 @@ public class SpikesZone : MonoBehaviour
 
     private void Start()
     {
-        GenerateSpikes(3);
+        GenerateSpikes(1);
     }
 
     public void GenerateSpikes(int spikesNbr)
