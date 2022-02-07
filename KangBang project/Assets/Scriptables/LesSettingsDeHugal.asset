@@ -12,24 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5b439069bf47a4a91d73ef4b7fcbde, type: 3}
   m_Name: LesSettingsDeHugal
   m_EditorClassIdentifier: 
-  BonbonsValue: 0
-  ScoreBumpWall: 10
+  BonbonsValue: 1
+  ScoreBumpWall: 1
   LevelsSettings:
-  - BeginAtPhase: 0
-    SpikesMinNumbers: 0
-    SpikesMaxNumbers: 0
-    BonbonsSummonChance: 0
-  - BeginAtPhase: 7
-    SpikesMinNumbers: 0
-    SpikesMaxNumbers: 0
-    BonbonsSummonChance: 0
-  - BeginAtPhase: 0
-    SpikesMinNumbers: 0
-    SpikesMaxNumbers: 0
-    BonbonsSummonChance: 0
-  - BeginAtPhase: 0
-    SpikesMinNumbers: 0
-    SpikesMaxNumbers: 0
-    BonbonsSummonChance: 0
-  GravityToAdd: 0
-  SpeedToAdd: 0
+  - BeginAtPhase: 1
+    SpikesMinNumbers: 1
+    SpikesMaxNumbers: 2
+    BonbonsSummonChance: 15
+  - BeginAtPhase: 6
+    SpikesMinNumbers: 2
+    SpikesMaxNumbers: 4
+    BonbonsSummonChance: 25
+  - BeginAtPhase: 16
+    SpikesMinNumbers: 3
+    SpikesMaxNumbers: 5
+    BonbonsSummonChance: 40
+  - BeginAtPhase: 26
+    SpikesMinNumbers: 5
+    SpikesMaxNumbers: 7
+    BonbonsSummonChance: 55
+  - BeginAtPhase: 51
+    SpikesMinNumbers: 8
+    SpikesMaxNumbers: 10
+    BonbonsSummonChance: 60
+  GravityToAdd: 0.01
+  SpeedToAdd: 0.02
