@@ -7,16 +7,19 @@ public class ELC_Move : MonoBehaviour
     public float JumpForce;
     public float HorizontalForce;
     public int movingSide = 1;
+    public SpriteRenderer sr;
     private Rigidbody2D rb;
     private AudioManager audioManager;
+    private SkinManager skinManager;
     
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
         audioManager = AudioManager.instance;
+        skinManager = SkinManager.instance;
+        sr.sprite = skinManager.sprite;
     }
 
-    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
