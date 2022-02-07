@@ -12,6 +12,8 @@ public class ELC_GameManager : MonoBehaviour
 
     [HideInInspector] public int CurrentScore;
     [HideInInspector] public int CurrentMoney;
+    public GameObject Player;
+    public List<SpikesZone> Spikes = new List<SpikesZone>();
     public GameObject ScoreGO;
 
     private void Awake()
@@ -23,6 +25,7 @@ public class ELC_GameManager : MonoBehaviour
         
     }
 
+    
 
     public void AddScore(int scoreToAdd)
     {
@@ -31,6 +34,7 @@ public class ELC_GameManager : MonoBehaviour
 
     public void PlayerDie()
     {
+        Destroy(Player);
         CurrentScore = 0;
     }
     
