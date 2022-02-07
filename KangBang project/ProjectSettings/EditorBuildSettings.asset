@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ELC_Test.unity
+    path: Assets/Scenes/ELC_Game.unity
     guid: 5afd8db94e6dcf94ba1283126b579e36
   m_configObjects: {}

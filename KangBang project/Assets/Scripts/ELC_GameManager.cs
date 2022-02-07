@@ -30,7 +30,7 @@ public class ELC_GameManager : MonoBehaviour
         if (instance != null) return;
         
         instance = this;
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
         
     }
 

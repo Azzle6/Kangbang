@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GB_MenuManager : MonoBehaviour
 {
     public string playGame;
+    public string menuScene;
     public GameObject mainMenu;
     public GameObject optionsMenu;
     public GameObject storeMenu;
@@ -54,6 +55,11 @@ public class GB_MenuManager : MonoBehaviour
         optionsMenu.SetActive(false);
         storeMenu.SetActive(false);
         mainMenu.SetActive(true);
+    }
+
+    public void GameToMainMenu()
+    {
+        SceneManager.LoadScene(menuScene);
     }
 
     public void QuitGame()
