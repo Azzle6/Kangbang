@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 453c628271b27c349ba384eb16572557
+=======
+guid: 96b6e7ddf5504d94a88f2b6edb096bdd
+>>>>>>> Félox
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6
