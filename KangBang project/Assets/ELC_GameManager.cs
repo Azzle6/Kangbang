@@ -16,7 +16,11 @@ public class ELC_GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance == null) instance = this;
+        if (instance != null) return;
+        
+        instance = this;
+        DontDestroyOnLoad(this.gameObject);
+        
     }
 
 
@@ -24,6 +28,10 @@ public class ELC_GameManager : MonoBehaviour
     {
         CurrentScore += scoreToAdd;
     }
-    
+
+    public void PlayerDie()
+    {
+        CurrentScore = 0;
+    }
     
 }
