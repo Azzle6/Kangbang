@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GB_MenuManager : MonoBehaviour
 {
     public string playGame;
+    public string menuScene;
     public GameObject mainMenu;
     public GameObject optionsMenu;
     public GameObject storeMenu;
@@ -18,9 +19,9 @@ public class GB_MenuManager : MonoBehaviour
 
     private void Start()
     {
-        optionsMenu.SetActive(false);
-        storeMenu.SetActive(false);
-        mainMenu.SetActive(true);
+        if(optionsMenu != null)optionsMenu.SetActive(false);
+        if(storeMenu != null)storeMenu.SetActive(false);
+        if(mainMenu != null)mainMenu.SetActive(true);
         /*FindObjectOfType<AudioManager>().StopPlaying("OutsideMusic");
         FindObjectOfType<AudioManager>().StopPlaying("DungeonMusic");
         FindObjectOfType<AudioManager>().StopPlaying("BossMusic");
@@ -54,6 +55,11 @@ public class GB_MenuManager : MonoBehaviour
         optionsMenu.SetActive(false);
         storeMenu.SetActive(false);
         mainMenu.SetActive(true);
+    }
+
+    public void GameToMainMenu()
+    {
+        SceneManager.LoadScene(menuScene);
     }
 
     public void QuitGame()

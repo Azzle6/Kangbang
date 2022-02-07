@@ -20,6 +20,7 @@ public class ELC_GameManager : MonoBehaviour
     public GameObject PlayerSpawnPosition;
     public List<SpikesZone> Spikes = new List<SpikesZone>(); //Mettre celui de droite en 1er et celui de gauche en 2ème position
     public GameObject ScoreGO;
+    public GameObject GameOverMenu;
 
     public int CurrentPhase;
     
@@ -30,7 +31,7 @@ public class ELC_GameManager : MonoBehaviour
         if (instance != null) return;
         
         instance = this;
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
         
     }
 
@@ -53,6 +54,7 @@ public class ELC_GameManager : MonoBehaviour
     public void PlayerDie()
     {
         Destroy(Player);
+        GameOverMenu.SetActive(true);
         CurrentScore = 0;
     }
 
@@ -62,6 +64,8 @@ public class ELC_GameManager : MonoBehaviour
         moveScript.SwitchSide();
         AddScore();
         CurrentPhase++;
+        
+        
         
         if (moveScript.movingSide == 1)
         {

@@ -5,16 +5,12 @@ using UnityEngine;
 
 public class ELC_Wall : MonoBehaviour
 {
-    private bool isKillOnTouch;
+    [SerializeField] private bool isKillOnTouch;
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (!isKillOnTouch)
         {
-            
-            
-            
             ELC_GameManager.instance.TouchWall();
-            
         }
         else
         {
