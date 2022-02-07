@@ -56,6 +56,15 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Validation
     clip: {fileID: 8300000, guid: e1b791c3481c05145a8c8690a181c15a, type: 3}
+    volume: 0.25
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.25
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 2ebb05d3269ff094994e0fccdcc0c287, type: 2}
+    source: {fileID: 0}
+  - name: Mort
+    clip: {fileID: 8300000, guid: 0035f2fca0878254fa748697501783e4, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
