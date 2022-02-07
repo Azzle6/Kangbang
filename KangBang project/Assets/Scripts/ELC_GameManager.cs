@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class ELC_GameManager : MonoBehaviour
 {
@@ -14,13 +15,15 @@ public class ELC_GameManager : MonoBehaviour
     [HideInInspector] public int CurrentScore;
     [HideInInspector] public int CurrentMoney;
     
-    [SerializeField] private GeneralSettings SettingsSO;
+    [SerializeField] public GeneralSettings SettingsSO;
     
     public GameObject PlayerPrefab;
     public GameObject PlayerSpawnPosition;
     public List<SpikesZone> Spikes = new List<SpikesZone>(); //Mettre celui de droite en 1er et celui de gauche en 2ème position
     public GameObject ScoreGO;
     public GameObject GameOverMenu;
+    public GameObject BonbonTemplate;
+    public GameObject[] BonbonSpawns;
 
     public int CurrentPhase;
     
@@ -43,6 +46,7 @@ public class ELC_GameManager : MonoBehaviour
     public void StartGame()
     {
         Player = Instantiate(PlayerPrefab, PlayerSpawnPosition.transform);
+        SpawnBonbon();
     }
 
     public void AddScore()
@@ -72,5 +76,10 @@ public class ELC_GameManager : MonoBehaviour
             Spikes[0].GenerateSpikes(SettingsSO.LevelsSettings[0].SpikesMinNumbers);
         }
         else Spikes[1].GenerateSpikes(SettingsSO.LevelsSettings[0].SpikesMinNumbers);
+    }
+
+    public void SpawnBonbon()
+    {
+        Instantiate(BonbonTemplate, BonbonSpawns[Random.Range(0, BonbonSpawns.Length - 1)].transform);
     }
 }
