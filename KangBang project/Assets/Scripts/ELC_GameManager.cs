@@ -77,12 +77,21 @@ public class ELC_GameManager : MonoBehaviour
         CurrentPhase++;
         
         
-        
-        if (moveScript.movingSide == 1)
+        for (int i = SettingsSO.LevelsSettings.Length - 1; i >= 0; i--)
         {
-            Spikes[0].GenerateSpikes(SettingsSO.LevelsSettings[0].SpikesMinNumbers);
+            Debug.Log(CurrentPhase);
+            if (SettingsSO.LevelsSettings[i].BeginAtPhase < CurrentPhase)
+            {
+                if (moveScript.movingSide == 1)
+                {
+                    Spikes[0].GenerateSpikes(Random.Range(SettingsSO.LevelsSettings[i].SpikesMinNumbers,SettingsSO.LevelsSettings[i].SpikesMaxNumbers + 1));
+                }
+                else Spikes[1].GenerateSpikes(Random.Range(SettingsSO.LevelsSettings[i].SpikesMinNumbers,SettingsSO.LevelsSettings[i].SpikesMaxNumbers + 1));
+
+                Debug.Log("passe");
+                break;
+            }
         }
-        else Spikes[1].GenerateSpikes(SettingsSO.LevelsSettings[0].SpikesMinNumbers);
     }
 
     public void SpawnBonbon()
