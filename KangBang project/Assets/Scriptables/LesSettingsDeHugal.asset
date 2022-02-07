@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: LesSettingsDeHugal
   m_EditorClassIdentifier: 
   BonbonsValue: 0
+  ScoreBumpWall: 10
   LevelsSettings:
   - SpikesNumbers: 0
     GravityStrength: 0

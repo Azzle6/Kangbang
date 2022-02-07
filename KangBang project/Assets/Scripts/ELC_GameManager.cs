@@ -12,9 +12,13 @@ public class ELC_GameManager : MonoBehaviour
 
     [HideInInspector] public int CurrentScore;
     [HideInInspector] public int CurrentMoney;
-    public GameObject Player;
-    public List<SpikesZone> Spikes = new List<SpikesZone>();
+    [SerializeField] private GeneralSettings SettingsSO;
+    public GameObject PlayerPrefab;
+    public GameObject PlayerSpawnPosition;
+    public List<SpikesZone> Spikes = new List<SpikesZone>(); //Mettre celui de droite en 1er et celui de gauche en 2ème position
     public GameObject ScoreGO;
+
+    private GameObject Player;
 
     private void Awake()
     {
@@ -25,11 +29,20 @@ public class ELC_GameManager : MonoBehaviour
         
     }
 
-    
-
-    public void AddScore(int scoreToAdd)
+    private void Start()
     {
-        CurrentScore += scoreToAdd;
+        StartGame();
+    }
+
+    public void StartGame()
+    {
+        Player = Instantiate(PlayerPrefab, PlayerSpawnPosition.transform);
+    }
+
+    public void AddScore()
+    {
+        CurrentScore += SettingsSO.ScoreBumpWall;
+        ScoreGO.GetComponent<TMP_Text>().text = "Score : " + CurrentScore;
     }
 
     public void PlayerDie()
