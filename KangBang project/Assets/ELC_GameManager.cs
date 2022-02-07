@@ -11,6 +11,7 @@ public class ELC_GameManager : MonoBehaviour
     public static ELC_GameManager instance;
 
     [HideInInspector] public int CurrentScore;
+    [HideInInspector] public int CurrentMoney;
     public GameObject ScoreGO;
 
     private void Awake()
@@ -23,4 +24,6 @@ public class ELC_GameManager : MonoBehaviour
     {
         CurrentScore += scoreToAdd;
     }
+    
+    
 }
