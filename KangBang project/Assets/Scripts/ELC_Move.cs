@@ -8,11 +8,12 @@ public class ELC_Move : MonoBehaviour
     public float HorizontalForce;
     public int movingSide = 1;
     private Rigidbody2D rb;
-    
+    private AudioManager audioManager;
     
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        audioManager = AudioManager.instance;
     }
 
     
@@ -32,6 +33,7 @@ public class ELC_Move : MonoBehaviour
     private void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x,JumpForce);
+        audioManager.Play("Jump");
     }
 
     public void SwitchSide()
