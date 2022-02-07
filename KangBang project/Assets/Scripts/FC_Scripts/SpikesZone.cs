@@ -12,6 +12,11 @@ public class SpikesZone : MonoBehaviour
     private List<int> usedSlots = new List<int>();
     private List<GameObject> spikes = new List<GameObject>();
 
+    private void Start()
+    {
+        GenerateSpikes(3);
+    }
+
     public void GenerateSpikes(int spikesNbr)
     {
         ClearSpikes();
