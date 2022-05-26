@@ -17,7 +17,7 @@ public class ELC_Move : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
         audioManager = AudioManager.instance;
         skinManager = SkinManager.instance;
-        sr.sprite = skinManager.sprite;
+        //sr.sprite = skinManager.sprite;
     }
 
     void Update()
